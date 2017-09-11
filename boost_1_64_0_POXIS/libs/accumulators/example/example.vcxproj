@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{57D2AB8B-8CBB-4B28-921E-C6916109B843}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>Accumulators_example</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..;$(BOOST_ROOT);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)example.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)example.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..;$(BOOST_ROOT);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)example.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\boost\accumulators\accumulators.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\accumulators_fwd.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\framework\accumulators\droppable_accumulator.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\framework\accumulators\external_accumulator.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\framework\accumulators\reference_accumulator.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\framework\accumulators\value_accumulator.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\framework\accumulator_base.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\framework\accumulator_concept.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\framework\accumulator_set.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\framework\depends_on.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\framework\external.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\framework\extractor.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\framework\features.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\framework\parameters\accumulator.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\framework\parameters\sample.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\framework\parameters\weight.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\framework\parameters\weights.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\numeric\detail\function1.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\numeric\detail\function2.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\numeric\detail\function3.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\numeric\detail\function4.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\numeric\detail\function_n.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\numeric\detail\pod_singleton.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\numeric\functional.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\numeric\functional\complex.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\numeric\functional\valarray.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\numeric\functional\vector.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\numeric\functional_fwd.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\count.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\covariance.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\density.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\error_of.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\error_of_mean.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\extended_p_square.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\extended_p_square_quantile.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\kurtosis.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\max.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\mean.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\median.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\min.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\moment.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\parameters\quantile_probability.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\peaks_over_threshold.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\pot_quantile.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\pot_tail_mean.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\p_square_cumulative_distribution.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\p_square_quantile.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\skewness.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\stats.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\sum.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\tail.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\tail_mean.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\tail_quantile.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\tail_variate.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\tail_variate_means.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\times2_iterator.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\variance.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\variates\covariate.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\weighted_covariance.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\weighted_density.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\weighted_extended_p_square.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\weighted_kurtosis.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\weighted_mean.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\weighted_median.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\weighted_moment.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\weighted_peaks_over_threshold.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\weighted_p_square_cumulative_distribution.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\weighted_p_square_quantile.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\weighted_skewness.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\weighted_sum.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\weighted_tail_mean.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\weighted_tail_quantile.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\weighted_tail_variate_means.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\weighted_variance.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics\with_error.hpp" />
+    <ClInclude Include="..\..\..\boost\accumulators\statistics_fwd.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
